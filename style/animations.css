@@ -1,0 +1,284 @@
+.infiniteLoop {
+    -webkit-animation-iteration-count: infinite!important;
+    animation-iteration-count: infinite!important;
+}
+
+.colorCycleBg {
+    animation: colorCycleBg 2s linear infinite;
+}
+
+@keyframes colorCycleBg {
+    0% {background-color: #F99;}
+    33% {background-color: #9F9;}
+    67% {background-color: #99F;}
+    100% {background-color: #F99;}
+}
+
+/* Go right from the bottom left */
+.bottomLeft {
+    bottom: 0;
+    left: 0;
+    -webkit-animation-name: bottomLeft;
+    animation-name: bottomLeft;
+}
+
+/* Corresponding animation */
+@-webkit-keyframes bottomLeft {
+    0% {transform: translate3d(20%, 5%, 0);}
+    20% {transform: translate3d(28%, 0, 0);}
+    100% {transform: translate3d(40%, 7%, 0);}
+}
+@keyframes bottomLeft {
+    0% {transform: translate3d(20%, 5%, 0);}
+    20% {transform: translate3d(28%, 0, 0);}
+    100% {transform: translate3d(40%, 7%, 0);}
+}
+
+/*Text affected by that anim */
+.bottomLeft + #wanText {
+    left: 0;
+    bottom: 0;
+    display: block!important;
+    -webkit-animation-name: bLeftText;
+    animation-name: bLeftText;
+}
+
+/* Corresponding animation */
+@-webkit-keyframes bLeftText {
+    0% { transform: rotate(-25deg) translate3d(100%, 0%, 0); opacity: 1;}
+    100% { transform: rotate(-25deg) translate3d(100%, -60%, 0); opacity: 0;}
+}
+@keyframes bLeftText {
+    0% { transform: rotate(-25deg) translate3d(100%, 0%, 0); opacity: 1;}
+    100% { transform: rotate(-25deg) translate3d(100%, -60%, 0); opacity: 0;}
+}
+
+.bottomRight {
+    bottom: 0;
+    right: 0;
+    -webkit-animation-name: bottomRight;
+    animation-name: bottomRight;
+}
+
+@-webkit-keyframes bottomRight {
+    0% {transform: scaleX(-1) translate3d(0, 50%, 0);}
+    100% {transform: scaleX(-1) translate3d(30%, 0, 0);}
+}
+
+@keyframes bottomRight {
+    0% {transform: scaleX(-1) translate3d(0, 50%, 0);}
+    100% {transform: scaleX(-1) translate3d(30%, 0, 0);}
+}
+
+.bottomRight + #wanText {
+    right: 0;
+    bottom: 0;
+    display: block!important;
+    -webkit-animation-name: bRightText;
+    animation-name: bRightText;
+}
+
+@-webkit-keyframes bRightText {
+    0% {transform: translate3d(-40%, -100%, 0) rotate(35deg) scale(0.5, 0.5);opacity: 1;}
+    100% {transform: translate3d(-70%, -100%, 0) rotate(35deg) scale(1, 1);opacity: 0;}
+}
+@keyframes bRightText {
+    0% {transform: translate3d(-40%, -100%, 0) rotate(35deg) scale(0.5, 0.5);opacity: 1;}
+    100% {transform: translate3d(-70%, -100%, 0) rotate(35deg) scale(1, 1);opacity: 0;}
+}
+
+.topRight {
+    right: 0;
+    top: 0;
+    -webkit-animation-name: topRight;
+    animation-name: topRight;
+}
+
+@-webkit-keyframes topRight {
+    0% {transform: rotate(-30deg) scaleX(-1) translate3d(-40%, -10%, 0);}
+    100% {transform: rotate(-30deg) scaleX(-1) translate3d(20%, -44%, 0);}
+}
+
+@keyframes topRight {
+    0% {transform: rotate(-30deg) scaleX(-1) translate3d(-40%, -10%, 0);}
+    100% {transform: rotate(-30deg) scaleX(-1) translate3d(20%, -44%, 0);}
+}
+
+.topRight + #wanText {
+    left: 0;
+    top: 0;
+    display: block!important;
+    -webkit-animation-name: topRightText;
+    animation-name: topRightText;
+}
+
+@-webkit-keyframes topRightText {
+    0% {transform: translate3d(80%, 250%, 0) scale3d(2, 0.5, 1);}
+    50% {transform: translate3d(80%, 250%, 0) scale3d(2, 3, 1);}
+    100% {transform: translate3d(80%, 250%, 0) scale3d(2, 3, 1);}
+}
+
+
+@keyframes topRightText {
+    0% {transform: translate3d(80%, 250%, 0) scale3d(2, 0.5, 1);}
+    50% {transform: translate3d(80%, 250%, 0) scale3d(2, 3, 1);}
+    100% {transform: translate3d(80%, 250%, 0) scale3d(2, 3, 1);}
+}
+
+.backFlip {
+    right: 0;
+    top: 0;
+    -webkit-animation-name: backFlip;
+    animation-name: backFlip;
+}
+
+@-webkit-keyframes backFlip {
+    0% {transform: scale3d(1, -1, 1) translate3d(0, 0, 0);}
+    50% {transform: scale3d(-2, -2, 1) translate3d(30%, -25%, 0);}
+    100% {transform: scale3d(-2, -2, 1) translate3d(30%, -25%, 0);}
+}
+
+@keyframes backFlip {
+    0% {transform: scale3d(1, -1, 1) translate3d(0, 0, 0);}
+    50% {transform: scale3d(-2, -2, 1) translate3d(30%, -25%, 0);}
+    100% {transform: scale3d(-2, -2, 1) translate3d(30%, -25%, 0);}
+}
+
+.fullScreen {
+    backface-visibility: none;
+    right: 0;
+    top: 45%;
+    -webkit-animation-name: fullScreen;
+    animation-name: fullScreen;
+    height: 10%!important;
+    width: auto!important;
+}
+
+@-webkit-keyframes fullScreen {
+    0% {transform: scale3d(-10, 10, 1) translate3d(100%, 0, 0);}
+    50% {transform: scale3d(-10, 10, 1) translate3d(35%, 0, 0);}
+    100% {transform: scale3d(-10, 10, 1) translate3d(30%, 0, 0);}
+}
+
+@keyframes fullScreen {
+    0% {transform: scale3d(-10, 10, 1) translate3d(100%, 0, 0);}
+    50% {transform: scale3d(-10, 10, 1) translate3d(35%, 0, 0);}
+    100% {transform: scale3d(-10, 10, 1) translate3d(30%, 0, 0);}
+}
+
+.fullScreen img {
+    height: 100%!important;
+    width: auto!important;
+}
+
+/* Mobile devices struggle with the black bars moving. We just leave them static */
+.fullScreen + span + #topBox, .fullScreen + span + #topBox + #botBox {
+    display: initial;
+    transform: scale3d(10000, 350, 1);
+}
+
+@media screen and (min-width: 481px) {
+    .fullScreen + span + #topBox, .fullScreen + span + #topBox + #botBox {
+        -webkit-animation-name: boxAnim;
+        animation-name: boxAnim;
+    }
+}
+
+/* Black bars */
+@-webkit-keyframes boxAnim {
+    0% {transform: scale3d(10000, 1, 1);}
+    60% {transform: scale3d(10000, 350, 1);}
+    100% {transform: scale3d(10000, 350, 1);}
+}
+@keyframes boxAnim {
+    0% {transform: scale3d(10000, 1, 1);}
+    60% {transform: scale3d(10000, 350, 1);}
+    100% {transform: scale3d(10000, 350, 1);}
+}
+
+.frontFlip {
+    height: 60%!important;
+    width: auto!important;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-name: frontFlip;
+    animation-name: frontFlip;
+}
+
+.frontFlip img {
+    height: 100%!important;
+    width: auto!important;
+}
+
+@-webkit-keyframes frontFlip {
+    0% {transform: scale3d(-2.5, 2.5, 1) translate3d(-25%, -25%, 0);}
+    50% {transform: scale3d(1, 1, 1);}
+    100% {transform: scale3d(1, 1, 1);}
+}
+@keyframes frontFlip {
+    0% {transform: scale3d(-2.5, 2.5, 1) translate3d(-25%, -25%, 0);}
+    50% {transform: scale3d(1, 1, 1);}
+    100% {transform: scale3d(1, 1, 1);}
+}
+
+.frontFlipAborted {
+    height: 60%!important;
+    width: auto!important;
+    bottom: 0;
+    left: 0;
+    -webkit-animation-name: frontFlipAborted;
+    animation-name: frontFlipAborted;
+}
+
+.frontFlipAborted img {
+    height: 100%!important;
+    width: auto!important;
+}
+
+@-webkit-keyframes frontFlipAborted {
+}
+
+@keyframes frontFlipAborted {
+    0% {transform: scale3d(-2.5, 2.5, 1) translate3d(-25%, -25%, 0);}
+    100% {transform: scale3d(-0.001, 1, 1);}
+}
+
+.shake {
+    -webkit-animation-timing-function: cubic-bezier(.36,.07,.19,.97)!important;
+    animation-timing-function: cubic-bezier(.36,.07,.19,.97)!important;
+    -webkit-animation-name: shake;
+    animation-name: shake;
+
+    bottom: 0;
+    left: 0;
+}
+
+@-webkit-keyframes shake {
+    10%, 90% {transform: translate3d(5%, 2%, 0);}
+    20%, 80% {transform: translate3d(-1%, 7%, 0);}
+    30%, 50%, 70% {transform: translate3d(3%, 0%, 0);}
+    40%, 60% {transform: translate3d(-6%, 4%, 0);}
+}
+@keyframes shake {
+    10%, 90% {transform: translate3d(5%, 2%, 0);}
+    20%, 80% {transform: translate3d(-1%, 7%, 0);}
+    30%, 50%, 70% {transform: translate3d(3%, 0%, 0);}
+    40%, 60% {transform: translate3d(-6%, 4%, 0);}
+}
+
+@-webkit-keyframes cssload-motion {
+    0% {-webkit-transform: translateX(0) scale(1);}
+    25% {-webkit-transform: translateX(-81px) scale(0.3);}
+    50% {-webkit-transform: translateX(0) scale(1);}
+    75% {-webkit-transform: translateX(81px) scale(0.3);}
+    100% {-webkit-transform: translateX(0) scale(1);}
+}
+
+@keyframes cssload-motion {
+    0% {transform: translateX(0) scale(1);}
+    25% {transform: translateX(-81px) scale(0.3);}
+    50% {transform: translateX(0) scale(1);}
+    75% {transform: translateX(81px) scale(0.3);}
+    100% {transform: translateX(0) scale(1);}
+}
+
